@@ -1,0 +1,20 @@
+/* #gambar {
+  background-image: url("../images/img-kholil.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
+@media screen and (max-width: 650px) {
+  #anatomiMata {
+    width: 300px !important;
+    height: 250px !important;
+  }
+  #textJudul {
+    font-size: 17px !important;
+  }
+  #textSamping {
+    margin-top: 10px;
+  }
+}
