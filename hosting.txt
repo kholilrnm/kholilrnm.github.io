@@ -2,4 +2,4 @@ Firebase :
 https://codepolitannewsreader-eb467.web.app/
 
 Githubpage :
-https://kholilrnm.github.io/PWA-Kholilul_Rachman_NM
+https://kholilrnm.github.io/
