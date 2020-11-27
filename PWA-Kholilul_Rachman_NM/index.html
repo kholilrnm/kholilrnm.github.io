@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SIBo - PWA</title>
+    <meta name="description" content="SIBo - PWA" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://api.football-data.org" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="asset/css/main.css" />
+    <link rel="stylesheet" href="asset/css/materialize.min.css" />
+    <link
+      rel="shortcut icon"
+      href="asset/img/logo_icon_fav.png"
+      type="image/x-icon"
+    />
+    <link rel="apple-touch-icon" href="asset/img/logo_192x192x.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <meta name="theme-color" content="#00897B" />
+    <script src="asset/js/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigasi -->
+    <nav class="green lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="index.html" class="brand-logo truncate" id="logo-container"
+          >SIBo - PWA</a
+        >
+        <a href="#" class="sidenav-trigger" data-target="nav-mobile">&#9776;</a>
+
+        <ul class="topnav right hide-on-med-and-down"></ul>
+        <ul class="sidenav" id="nav-mobile"></ul>
+      </div>
+    </nav>
+    <!-- Akhir Navigasi -->
+
+    <div class="container" id="body-content"></div>
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- Akhir Footer -->
+
+    <script src="asset/js/materialize.min.js"></script>
+    <script src="asset/js/idb.js"></script>
+    <script src="asset/js/nav.js"></script>
+    <script src="asset/js/api.js"></script>
+    <script src="asset/js/request.js"></script>
+    <script src="asset/js/footer.js"></script>
+  </body>
+</html>

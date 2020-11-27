@@ -1,0 +1,17 @@
+{
+  "name": "SIBo - PWA",
+  "short_name": "SIBo - PWA",
+  "description": "Sistem Informasi Bola",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#c4fb6d",
+  "theme_color": "#c4fb6d",
+  "icons": [
+    {
+      "src": "asset/img/logo_splash_screen512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "gcm_sender_id": "700000363513"
+}
