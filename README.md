@@ -1,2 +1,1 @@
-# kholilrnm.github.io
-test pwa
+# a74-pwa
