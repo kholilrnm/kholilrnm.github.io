@@ -81,15 +81,29 @@ workbox.routing.registerRoute(
 );
 
 workbox.routing.registerRoute(
-  /^https:\/\/fonts\.googleapis\.com/,
+  /.*(?:googleapis|gstatic)\.com/,
   workbox.strategies.staleWhileRevalidate({
-    cacheName: "fonts-googleapis-bal-balan",
+    cacheName: "google-fonts-stylesheets",
   })
 );
 
-workbox.routing.registerRoute(
-  /^https:\/\/fonts\.gstatic\.com/,
-  workbox.strategies.staleWhileRevalidate({
-    cacheName: "fonts-gstatic-bal-balan",
-  })
-);
+self.addEventListener("push", function (event) {
+  var body;
+  if (event.data) {
+    body = event.data.text();
+  } else {
+    body = "Push message no payload";
+  }
+  var options = {
+    body: body,
+    icon: "asset/img/logo_icon_fav.png",
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1,
+    },
+  };
+  event.waitUntil(
+    self.registration.showNotification("Push Notification", options)
+  );
+});

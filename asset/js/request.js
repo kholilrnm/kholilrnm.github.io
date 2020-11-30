@@ -27,44 +27,48 @@ function requestPermission() {
         return;
       }
 
-      if ("PushManager" in window) {
-        navigator.serviceWorker.getRegistration().then(function (registration) {
-          registration.pushManager
-            .subscribe({
-              userVisibleOnly: true,
-              applicationServerKey: urlBase64ToUint8Array(
-                "BIuruOK_5khtLqFu_6QMNTC-WhzJmvKA0PHrairNLX2e6UdJ2yBkcHJTHJ10HdzbDFdQAXnjjunWQ8aR6LprjmA"
-              ),
-            })
-            .then(function (subscribe) {
-              console.log(
-                "Berhasil melakukan subscribe dengan endpoint: ",
-                subscribe.endpoint
-              );
-              console.log(
-                "Berhasil melakukan subscribe dengan p256dh key: ",
-                btoa(
-                  String.fromCharCode.apply(
-                    null,
-                    new Uint8Array(subscribe.getKey("p256dh"))
-                  )
-                )
-              );
-              console.log(
-                "Berhasil melakukan subscribe dengan auth key: ",
-                btoa(
-                  String.fromCharCode.apply(
-                    null,
-                    new Uint8Array(subscribe.getKey("auth"))
-                  )
-                )
-              );
-            })
-            .catch(function (e) {
-              console.error("Tidak dapat melakukan subscribe ", e.message);
+      navigator.serviceWorker.ready.then(() => {
+        if ("PushManager" in window) {
+          navigator.serviceWorker
+            .getRegistration()
+            .then(function (registration) {
+              registration.pushManager
+                .subscribe({
+                  userVisibleOnly: true,
+                  applicationServerKey: urlBase64ToUint8Array(
+                    "BMloMY36Z3pceoeX5e2GALPxYvKEejIFRlI9OZI7F5HRVLW99-lc_5mjkiORhmt1m6443oo8znC1ZrIDTsKHbh8"
+                  ),
+                })
+                .then(function (subscribe) {
+                  console.log(
+                    "Berhasil melakukan subscribe dengan endpoint: ",
+                    subscribe.endpoint
+                  );
+                  console.log(
+                    "Berhasil melakukan subscribe dengan p256dh key: ",
+                    btoa(
+                      String.fromCharCode.apply(
+                        null,
+                        new Uint8Array(subscribe.getKey("p256dh"))
+                      )
+                    )
+                  );
+                  console.log(
+                    "Berhasil melakukan subscribe dengan auth key: ",
+                    btoa(
+                      String.fromCharCode.apply(
+                        null,
+                        new Uint8Array(subscribe.getKey("auth"))
+                      )
+                    )
+                  );
+                })
+                .catch(function (e) {
+                  console.error("Tidak dapat melakukan subscribe ", e.message);
+                });
             });
-        });
-      }
+        }
+      });
     });
   }
 }

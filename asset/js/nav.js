@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  var elems = document.querySelectorAll(".sidenav");
+  let elems = document.querySelectorAll(".sidenav");
   M.Sidenav.init(elems);
   loadNav();
 
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var page = window.location.hash.substr(1);
-  if (page == "") page = "standings";
+  if (page === "") page = "standings";
   loadPage(page);
 
   function loadPage(page) {
@@ -41,13 +41,13 @@ document.addEventListener("DOMContentLoaded", function () {
         var content = document.querySelector("#body-content");
         if (this.status == 200) {
           content.innerHTML = xhttp.responseText;
-          if (page == "standings") {
+          if (page === "standings") {
             get_standings();
           }
-          if (page == "teams") {
+          if (page === "teams") {
             get_teams(teams_jerman);
           }
-          if (page == "favorit") {
+          if (page === "favorit") {
             team_favorite();
           }
         } else if (this.status == 404) {
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     };
-    xhttp.open("GET", "pages/" + page + ".html", true);
+    xhttp.open("GET", `pages/${page}.html`, true);
     xhttp.send();
   }
 });
