@@ -1,5 +1,0 @@
-Firebase :
-https://codepolitannewsreader-eb467.web.app/
-
-Githubpage :
-https://kholilrnm.github.io/
