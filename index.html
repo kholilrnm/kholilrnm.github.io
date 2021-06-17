@@ -35,21 +35,21 @@
 <body>
 
 <body>
-  <div id="loader_hide" class="container text-center mt-5">
+    <div id="particles-js" style="position: fixed; margin-top: 10px; width: 100%; height: 100%;"></div>
+
+  <div id="loader_hide" class="container text-center mt-5 position-relative">
     <img style="width: 30%;" class="mt-4 loader-img" src="images/loader.gif" alt="loader">
     <h3>Happy Ied Mubarok 1442 H</h3>
     <p style="font-size: 30px;">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ وَ تَقَبَّلْ ياَ كَرِيْمُ</p>
     <p>Mohon Maaf Lahir dan Batin 🙏</p>
   </div>
 
-  <div id="loader_show" style="">
+  <div id="loader_show">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-1">
       <div class="container">
         <a class="navbar-brand fw-bold fs-2" href="pages/s_messages.html">Kholil<span class="text-danger">.</span></a>
       </div>
     </nav>
-
-    <div id="particles-js" style="position: fixed; margin-top: 100px; width: 100%; height: 100%;"></div>
     
     <section class="jumbotron" id="home">
       <div class="container-parallax position-fixed overflow-hidden">
@@ -66,7 +66,7 @@
       <div class="container text-center position-relative">
         <img id="img_avatar" src="images/kholil.jpg" alt="Images 1" class="images-avatar rounded-circle" />
         <h1 class="text-light mt-3">Kholilul Rachman N.M</h1>
-        <p class="text-light fw-light fs-6 mt-3">Full Stack Developer | Bachelor's Computer Science, Informatics Engineering</p>
+        <p class="text-light fw-light fs-6 mt-3">Full Stack Developer | Freelancer | Content Writer</p>
             <div class="social-media mt-4">
               <a href="https://instagram.com/kholilrnm" target="_blank" title="Instagram"><i class="fa fa-instagram fs-4 me-3 text-light sm-content"></i></a>
               <a href="https://twitter.com/kholilrnm" target="_blank" title="Twitter"><i class="fa fa-twitter fs-4 me-3 text-light sm-content"></i></a>
@@ -75,9 +75,12 @@
             </div>
             <a id="message_me" class="btn btn-primary mt-3 rounded-pill px-5">Secret Message</a><br>
             <p id="text_message" style="font-size: 13px;"></p>
-            <a id="projects_me" href="#" class="btn btn-primary rounded-pill px-5" onclick="go_projects()">See My Projects</a>
+            <a id="projects_me" href="#" class="btn btn-primary rounded-pill px-5" onclick="go_projects()">My Projects</a>
             <p id="text_projects" style="font-size: 13px;"></p>
-            <a id="blogs_me" href="#" class="btn btn-primary rounded-pill px-5" onclick="go_blogs()">See My Blogs</a>
+            <a id="blogs_me" href="pages/s_blogs.html" class="btn btn-primary rounded-pill px-5">My Blogs</a>
+            <p></p>
+            <a id="hire_me" href="mailto:kholilrachman.if@gmail.com" class="btn btn-primary rounded-pill px-5">Hire Me</a>
+
             <p id="text_blogs" style="font-size: 13px;"></p>
 
             <!-- Modal -->
@@ -126,8 +129,8 @@
 
     <script defer>
         $('#loader_show').hide();
-        $('#loader_hide').delay(3300).fadeOut();
-        $('#loader_show').delay(3740).fadeIn();
+        $('#loader_hide').delay(3000).fadeOut();
+        $('#loader_show').delay(3300).fadeIn();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
@@ -168,17 +171,6 @@
             return false;
         }
     </script>
-
-    <!-- <script>
-        firebase.database().ref("messages").on("child_added", function(snapshot){
-            var html = "";
-            html += "<li>";
-            html += snapshot.val().sender + ": " + snapshot.val().message;
-            html += "</li>";
-
-            document.getElementById("messages").innerHTML += html;
-        });
-    </script> -->
 
 
 </body>
