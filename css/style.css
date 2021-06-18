@@ -187,6 +187,10 @@ footer > .container {
   height: 60px;
 }
 
+#c_footer_desk {
+  margin-bottom: 40px !important;
+}
+
 /* Responsive Breakpoints */
 /* Mobile */
 @media (max-width: 767.98px) {
@@ -251,5 +255,17 @@ footer > .container {
 
   #img_avatar{
     width: 35%;
+  }
+
+  #parallax_js{
+    display: none;
+  }
+
+  #c_footer_desk {
+    display: none;
+  }
+
+  #home {
+    margin-bottom: -80px !important;
   }
 }

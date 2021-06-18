@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="../css/blogs.css">
 </head>
 <body>
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-1">
@@ -22,7 +23,6 @@
 
             <button type="button" id="sidebarCollapse" class="btn btn-primary" style="float: right;">
                 <i class="fas fa-align-left"></i>
-                    <span>&nbsp; Toggle Sidebar</span>
             </button>
         </div>
       </nav>
@@ -36,7 +36,7 @@
                     <h3 class="text-center" style="margin-top: -15px">Ilmu Pondok</h3>
                 </div>
 
-                <ul class="list-unstyled components">
+                <ul id="desk_sidebar_blog" class="list-unstyled components">
                     <hr>
                     <li class="active" style="margin-left: 20px;">
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="text-light d-text-none">🍔&nbsp;Beranda</a>
@@ -55,6 +55,28 @@
                     </li>
                 </ul>
 
+                <ul id="mob_sidebar_blog" class="list-unstyled components">
+                    <hr>
+                    <br>
+                    <center>
+                        <a id="card_sidebar_mob" class="card" href="aaaaa" class="text-light" style="width: 15rem; text-decoration: none; border-color: white; border-radius: 10px; color: white; background-color: #363232">
+                          <i class="fa fa-home" style="padding: 15px; font-size: 21px;"> &nbsp;Beranda</i>
+                        </a>
+                    </center>
+                    <p></p>
+                    <center>
+                        <a id="card_sidebar_mob" class="card" href="aaaaa" class="text-light" style="width: 15rem; text-decoration: none; border-color: white; border-radius: 10px; color: white; background-color: #363232">
+                          <i class="fa fa-book" style="padding: 15px; font-size: 21px;"> &nbsp;Ilmu Hadist</i>
+                        </a>
+                    </center>
+                    <p></p>
+                    <center>
+                        <a id="card_sidebar_mob" class="card" href="aaaaa" class="text-light" style="width: 15rem; text-decoration: none; border-color: white; border-radius: 10px; color: white; background-color: #363232">
+                          <i class="fa fa-file" style="padding: 15px; font-size: 21px;"> &nbsp;Dalil Najjah</i>
+                        </a>
+                    </center>
+                </ul>
+
                 <center>
                     <a class="btn btn-primary mt-5" href="../index.html">⬅ Kembali</a>
                 </center>
@@ -71,9 +93,11 @@
         </div>
       </section>
       
+      <div id="blog_br"><br><br><br></div>
+
       <footer class="text-center fw-lighter fs-6 border-top">
-        <div class="container pt-3 fw-bolder" id="c_footer">
-          <p style="margin-left: 225px"><i class="far fa-copyright"></i><script>document.write(new Date().getFullYear())</script> | Made with <i class="fas fa-heart" style="color: red"></i></p>
+        <div class="container pt-3 fw-bolder">
+          <p id="ptext_footer"><i class="far fa-copyright"></i><script>document.write(new Date().getFullYear())</script> | Made with <i class="fas fa-heart" style="color: red"></i></p>
         </div>
       </footer>
   

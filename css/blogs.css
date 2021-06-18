@@ -1,0 +1,40 @@
+#ptext_footer {
+	margin-left: 225px;
+}
+
+#blog_br {
+	display: none;
+}
+
+#mob_sidebar_blog {
+	display: none;
+}
+
+#desk_sidebar_blog {
+	display: block;
+}
+
+@media (max-width: 767.98px) {
+	#ptext_footer {
+		margin-left: auto;
+	}
+
+ 	#blog_br {
+ 		display: block;
+ 		margin-top: 8px;
+ 	}
+
+ 	#card_sidebar_mob {
+ 		width: 15rem; text-decoration: none; border-color: white; border-radius: 10px; color: white; background-color: #363232
+ 	}
+
+ 	#desk_sidebar_blog {
+ 		display: none;
+ 	}
+	
+	#mob_sidebar_blog {
+		display: block;
+	}
+
+
+}

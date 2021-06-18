@@ -52,7 +52,7 @@
     </nav>
     
     <section class="jumbotron" id="home">
-      <div class="container-parallax position-fixed overflow-hidden">
+      <div id="parallax_js" class="container-parallax position-fixed overflow-hidden">
         <div id="scene" class="scene">
           <div class="layer" data-depth="0.5"><img src="images/5-min.png" alt="" /></div>
           <div class="layer" data-depth="2"><img src="images/6-min.png" alt="" /></div>
@@ -78,10 +78,9 @@
             <a id="projects_me" href="#" class="btn btn-primary rounded-pill px-5" onclick="go_projects()">My Projects</a>
             <p id="text_projects" style="font-size: 13px;"></p>
             <a id="blogs_me" href="pages/s_blogs.html" class="btn btn-primary rounded-pill px-5">My Blogs</a>
-            <p></p>
-            <a id="hire_me" href="mailto:kholilrachman.if@gmail.com" class="btn btn-primary rounded-pill px-5">Hire Me</a>
-
             <p id="text_blogs" style="font-size: 13px;"></p>
+            <a id="hire_me" href="mailto:kholilrachman.if@gmail.com" class="btn btn-primary rounded-pill px-5">Hire Me</a>
+            <p id="text_hire_me"></p>
 
             <!-- Modal -->
             <div class="modal fade" id="modalKirimPesan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -119,8 +118,10 @@
     
     </section>
     
-    <footer class="mt-5 text-center fw-lighter fs-6 border-top">
-      <div class="container pt-3 fw-bolder">
+    <div id="c_footer_desk"><br><br></div>
+
+    <footer class="text-center fw-lighter fs-6 border-top mt-5">
+      <div id="cont_footer_mob" class="container pt-3 fw-bolder">
         <p><i class="far fa-copyright"></i><script>document.write(new Date().getFullYear())</script> | Made with <i class="fas fa-heart" style="color: red"></i></p>
       </div>
     </footer>
@@ -129,8 +130,8 @@
 
     <script defer>
         $('#loader_show').hide();
-        $('#loader_hide').delay(3000).fadeOut();
-        $('#loader_show').delay(3300).fadeIn();
+        $('#loader_hide').delay(2000).fadeOut();
+        $('#loader_show').delay(3000).fadeIn();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
@@ -170,6 +171,13 @@
 
             return false;
         }
+    </script>
+
+    <script>
+        $('#message_me').delay(1000).fadeOut().delay(2300).fadeIn();
+        $('#projects_me').delay(1000).fadeOut().delay(2800).fadeIn();
+        $('#blogs_me').delay(1000).fadeOut().delay(3300).fadeIn();
+        $('#hire_me').delay(1000).fadeOut().delay(3800).fadeIn();
     </script>
 
 
