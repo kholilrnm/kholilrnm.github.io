@@ -17,6 +17,7 @@
 @media (max-width: 767.98px) {
 	#ptext_footer {
 		margin-left: auto;
+		color: white;
 	}
 
  	#blog_br {
@@ -34,6 +35,14 @@
 	
 	#mob_sidebar_blog {
 		display: block;
+	}
+
+	#home {
+		background-color: #363232;
+	}
+
+	#br_top {
+		border-top: 0 !important;
 	}
 
 

@@ -262,7 +262,8 @@ footer > .container {
   }
 
   #c_footer_desk {
-    display: none;
+    /*display: none;*/
+    height: 20px;
   }
 
   #home {
