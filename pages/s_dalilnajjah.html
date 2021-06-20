@@ -31,7 +31,7 @@
       <section class="jumbotron" id="home">
         <div class="wrapper">
             <!-- Sidebar -->
-            <nav id="sidebar_beranda">
+            <nav id="sidebar_submenu">
                 <br><br><br><br>
                 <div class="sidebar-header">
                     <h3 class="text-center" style="margin-top: -15px">Ilmu Pondok</h3>
@@ -40,19 +40,21 @@
                 <ul id="desk_sidebar_blog" class="list-unstyled components">
                     <hr>
                     <li class="active" style="margin-left: 20px;">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="text-light d-text-none">🍔&nbsp;Beranda</a>
+                        <a id="card_sidebar_desk_beranda" class="card" href="/pages/s_blogs.html" class="text-light" onclick="setColorBerandaDesk('button', '#363232')" style="text-decoration: none; color: white; background-color: #363232; border-color: #363232">
+                          <i class="fa fa-home" style="padding: 15px; font-size: 17px;"> &nbsp;Beranda</i>
+                        </a>
                     </li>
                     <li class="active" style="margin-left: 20px;">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="text-light d-text-none">🥞&nbsp;&nbsp;Ilmu Hadist</a>
+                        <a id="card_sidebar_desk_ilmuhadist" class="card" href="/pages/s_ilmuhadist.html" class="text-light" onclick="setColorIlmuhadistDesk('button', '#363232')" style="text-decoration: none; color: white; background-color: #363232; border-color: #363232">
+                        <i class="fa fa-book" style="padding: 1px 15px 15px 15px; font-size: 17px;"> &nbsp;Ilmu Hadist</i>
                     </li>
                     <li class="active" style="margin-left: 20px;">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="text-light d-text-none">🌭&nbsp;7 Kunci Sukses Pondok</a>
+                        <a id="card_sidebar_desk_7kuncisukses" class="card" href="/pages/s_7kuncisukses.html" class="text-light" onclick="setColor7kuncisuksesDesk('button', '#363232')" style="text-decoration: none; color: white; background-color: #363232; border-color: #363232">                        
+                        <i class="fa fa-key" style="padding: 1px 15px 15px 15px; font-size: 17px;"> &nbsp;7 Kunci Kesuksesan</i>
                     </li>
                     <li class="active" style="margin-left: 20px;">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="text-light d-text-none">🍟&nbsp;Dalil Najjah</a>
-                    </li>
-                    <li class="active" style="margin-left: 20px;">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="text-light d-text-none">🍿....</a>
+                        <a id="card_sidebar_desk_dalilnajjah" class="card" href="/pages/s_dalilnajjah.html" class="text-light" onclick="setColorDalilnajjahDesk('button', '#363232')" style="text-decoration: none; color: white; background-color: #363232; border-color: #363232">                        
+                        <i class="fa fa-book" style="padding: 1px 15px 15px 15px; font-size: 17px;"> &nbsp;Dalil Najjah</i>
                     </li>
                 </ul>
 
@@ -91,16 +93,16 @@
         </div>
 
         <div id="content">
-            <div class="container text-light">
             <div id="content_br"><br><br><br></div>
-            <span>#DalilNajjah</span>
-
-<!--             <p>Ini adalah laman blog mengenai ilmu-ilmu selama saya menjadi santri di pondok pesantren tepatnya di Amanatul Ummah Pacet Mojokerto. Semoga bisa bermanfaat menambah wawasan bagi kita semua. Aamiin.. 🙏</p>
-            <p>*catatan: jika blog ini terdapat beberapa kesalahan penulisan pemaknaan kitab ataupun hal lainnya silahkan pembaca bila berkenan dapat berkomentar di kotak yang telah di sediakan. شُكْرًا 👌</p>
+            <div class="container text-light" id="desk_content_br">
+                <span>#DalilNajjah</span>
+                <p style="color: black; font-weight: bold;" class="mt-5">Laman Blog Ini Masih Dalam Tahap Pengembangan, Stay Tuned 🙌</p>
             </div>
-            <p style="color: black; font-weight: bold;" class="text-center mt-5">Laman Blog Ini Masih Dalam Tahap Pengembangan, Stay Tuned 🙌</p>
- -->        
+            <div class="container text-light" id="mob_content_br">
+                <span>#DalilNajjah</span>
+                <p style="color: black; font-weight: bold;" class="text-center mt-5">Laman Blog Ini Masih Dalam Tahap Pengembangan, Stay Tuned 🙌</p>
             </div>
+        </div>
       </section>
       
       <div id="blog_br"><br><br><br></div>
@@ -116,7 +118,7 @@
     <script>
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
-                $('#sidebar_beranda').toggleClass('active');
+                $('#sidebar_submenu').toggleClass('active');
             });
 
         });
