@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+
+	#content span {
+	    /*The change*/
+	    display:inline-block; /*or display:block;*/
+	    margin-bottom: 15px;
+	    padding: 10px;
+	    color: black;
+	}
+
+	#content p {
+		text-align: justify;
+	    padding: 10px;
+	    color: black;
+	}
+
+	#content {
+		background-color: #e8edea;
+	}
+
+	footer, #blog_br, #home {
+		background-color: #e8edea;
+	}
+
+
+
+}
