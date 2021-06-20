@@ -1,5 +1,6 @@
 var count = 1;
 
+// Mobile
 function setColorBeranda(btn, color) {
     var property = document.getElementById("card_sidebar_mob_beranda");
     if (count == 0) {
@@ -48,3 +49,51 @@ function setColorDalilnajjah(btn, color) {
     }
 }
 
+// Desktop
+function setColorBerandaDesk(btn, color) {
+    var property = document.getElementById("card_sidebar_mob_beranda");
+    if (count == 0) {
+        property.style.color = "#363232"
+        count = 1;        
+    }
+    else {
+        property.style.color = "#de564e"
+        count = 0;
+    }
+}
+
+function setColorIlmuhadistDesk(btn, color) {
+    var property = document.getElementById("card_sidebar_mob_ilmuhadist");
+    if (count == 0) {
+        property.style.color = "#363232"
+        count = 1;        
+    }
+    else {
+        property.style.color = "#de564e"
+        count = 0;
+    }
+}
+
+function setColor7kuncisuksesDesk(btn, color) {
+    var property = document.getElementById("card_sidebar_mob_7kuncisukses");
+    if (count == 0) {
+        property.style.color = "#363232"
+        count = 1;        
+    }
+    else {
+        property.style.color = "#de564e"
+        count = 0;
+    }
+}
+
+function setColorDalilnajjahDesk(btn, color) {
+    var property = document.getElementById("card_sidebar_mob_dalilnajjah");
+    if (count == 0) {
+        property.style.color = "#363232"
+        count = 1;        
+    }
+    else {
+        property.style.color = "#de564e"
+        count = 0;
+    }
+}
