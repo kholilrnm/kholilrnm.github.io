@@ -1,0 +1,36 @@
+
+@media (max-width: 768px) {
+    #sidebarCollapse{
+        display:inline-block;
+    }
+
+/*    #content{
+        display: none;
+    }
+*/
+    #sidebar_beranda.active {
+        width: 100%;
+        text-align: center;
+        margin-left: 1px !important;
+    }
+
+    /* Reappearing the sidebar on toggle button click */
+    #sidebar_beranda {
+        width: 250px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 999;
+        background: #363232;
+        color: #fff;
+        transition: all 0.3s;
+        margin-left: -260px !important;
+    }
+
+    footer {
+        margin-top: -58px !important;
+    }
+
+
+}
