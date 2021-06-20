@@ -5,12 +5,23 @@
 	    display:inline-block; /*or display:block;*/
 	    margin-bottom: 15px;
 	    padding: 10px;
+	    color: black;
 	}
 
 	#content p {
 		text-align: justify;
 	    padding: 10px;
-
+	    color: black;
 	}
+
+	#content {
+		background-color: white;
+	}
+
+	footer, #blog_br {
+		background-color: white;
+	}
+
+
 
 }
