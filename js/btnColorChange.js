@@ -51,7 +51,7 @@ function setColorDalilnajjah(btn, color) {
 
 // Desktop
 function setColorBerandaDesk(btn, color) {
-    var property = document.getElementById("card_sidebar_mob_beranda");
+    var property = document.getElementById("card_sidebar_desk_beranda");
     if (count == 0) {
         property.style.color = "#363232"
         count = 1;        
@@ -63,7 +63,7 @@ function setColorBerandaDesk(btn, color) {
 }
 
 function setColorIlmuhadistDesk(btn, color) {
-    var property = document.getElementById("card_sidebar_mob_ilmuhadist");
+    var property = document.getElementById("card_sidebar_desk_ilmuhadist");
     if (count == 0) {
         property.style.color = "#363232"
         count = 1;        
@@ -75,7 +75,7 @@ function setColorIlmuhadistDesk(btn, color) {
 }
 
 function setColor7kuncisuksesDesk(btn, color) {
-    var property = document.getElementById("card_sidebar_mob_7kuncisukses");
+    var property = document.getElementById("card_sidebar_desk_7kuncisukses");
     if (count == 0) {
         property.style.color = "#363232"
         count = 1;        
@@ -87,7 +87,7 @@ function setColor7kuncisuksesDesk(btn, color) {
 }
 
 function setColorDalilnajjahDesk(btn, color) {
-    var property = document.getElementById("card_sidebar_mob_dalilnajjah");
+    var property = document.getElementById("card_sidebar_desk_dalilnajjah");
     if (count == 0) {
         property.style.color = "#363232"
         count = 1;        
