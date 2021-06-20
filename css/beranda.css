@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+
+	#content span {
+	    /*The change*/
+	    display:inline-block; /*or display:block;*/
+	    margin-bottom: 15px;
+	}
+
+	#content p {
+		text-align: justify;
+	}
+
+}

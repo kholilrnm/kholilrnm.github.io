@@ -4,10 +4,10 @@
         display:inline-block;
     }
 
-    #content{
+/*    #content{
         display: none;
     }
-
+*/
     #sidebar_beranda.active {
         width: 100%;
         text-align: center;

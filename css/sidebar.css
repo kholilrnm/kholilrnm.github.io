@@ -90,6 +90,10 @@
         display: none;
     }
 
+    #sidebarCollapse {
+        display: none;
+    }
+
     /* 80px and its content aligned to centre. Pushing it off the screen with the
        negative left margin
     */
