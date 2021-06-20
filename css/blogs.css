@@ -18,6 +18,7 @@
 	#ptext_footer {
 		margin-left: auto;
 		color: white;
+		display: none;
 	}
 
  	#blog_br {
@@ -38,7 +39,9 @@
 	}
 
 	#home {
+		/*margin-top: 10px;*/
 		background-color: #363232;
+		/*background-color: black;*/
 	}
 
 	#br_top {

@@ -263,10 +263,13 @@ footer > .container {
 
   #c_footer_desk {
     /*display: none;*/
-    height: 20px;
+    height: 40px;
   }
 
   #home {
     margin-bottom: -80px !important;
   }
+
+  
+
 }
