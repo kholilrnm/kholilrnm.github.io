@@ -4,10 +4,13 @@
 	    /*The change*/
 	    display:inline-block; /*or display:block;*/
 	    margin-bottom: 15px;
+	    padding: 10px;
 	}
 
 	#content p {
 		text-align: justify;
+	    padding: 10px;
+
 	}
 
 }
