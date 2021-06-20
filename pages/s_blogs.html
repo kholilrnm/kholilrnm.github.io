@@ -59,25 +59,25 @@
                     <hr>
                     <br>
                     <center>
-                        <a id="card_sidebar_mob" class="card" href="/pages/s_beranda.html" class="text-light" style="width: 15rem; text-decoration: none; border-color: white; border-radius: 10px; color: white; background-color: #363232">
+                        <a id="card_sidebar_mob" class="card" href="#" class="text-light" onclick="setColorBeranda('button', '#363232')" style="width: 15rem; text-decoration: none; border-color: white; border-radius: 10px; color: white; background-color: #363232">
                           <i class="fa fa-home" style="padding: 15px; font-size: 17px;;"> &nbsp;Beranda</i>
                         </a>
                     </center>
                     <p></p>
                     <center>
-                        <a id="card_sidebar_mob" class="card" href="/pages/s_ilmuhadist.html" class="text-light" style="width: 15rem; text-decoration: none; border-color: white; border-radius: 10px; color: white; background-color: #363232">
+                        <a id="1" class="card" href="/pages/s_ilmuhadist.html" class="text-light" style="width: 15rem; text-decoration: none; border-color: white; border-radius: 10px; color: white; background-color: #363232">
                           <i class="fa fa-book" style="padding: 15px; font-size: 17px;;"> &nbsp;Ilmu Hadist</i>
                         </a>
                     </center>
                     <p></p>
                     <center>
-                        <a id="card_sidebar_mob" class="card" href="/pages/s_7kuncisukses.html" class="text-light" style="width: 15rem; text-decoration: none; border-color: white; border-radius: 10px; color: white; background-color: #363232">
+                        <a id="1" class="card" href="/pages/s_7kuncisukses.html" class="text-light" style="width: 15rem; text-decoration: none; border-color: white; border-radius: 10px; color: white; background-color: #363232">
                           <i class="fa fa-key" style="padding: 15px; font-size: 17px;"> &nbsp;7 Kunci Kesuksesan</i>
                         </a>
                     </center>
                     <p></p>
                     <center>
-                        <a id="card_sidebar_mob" class="card" href="/pages/s_dalilnajjah.html" class="text-light" style="width: 15rem; text-decoration: none; border-color: white; border-radius: 10px; color: white; background-color: #363232">
+                        <a id="1" class="card" href="/pages/s_dalilnajjah.html" class="text-light" style="width: 15rem; text-decoration: none; border-color: white; border-radius: 10px; color: white; background-color: #363232">
                           <i class="fa fa-file" style="padding: 15px; font-size: 17px;;"> &nbsp;Dalil Najjah</i>
                         </a>
                     </center>
@@ -116,6 +116,23 @@
             });
 
         });
+    </script>
+
+    <script>
+        var count = 1;
+        function setColorBeranda(btn, color) {
+            var property = document.getElementById("card_sidebar_mob");
+            if (count == 0) {
+                property.style.backgroundColor = "#363232"
+                count = 1;        
+            }
+            else {
+                property.style.backgroundColor = "#de564e"
+                count = 0;
+            }
+            // console.log(property);
+            // alert('aaaaaaaaa');
+        }
     </script>
 
   </body>
