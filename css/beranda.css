@@ -15,11 +15,11 @@
 	}
 
 	#content {
-		background-color: white;
+		background-color: #e8edea;
 	}
 
-	footer, #blog_br {
-		background-color: white;
+	footer, #blog_br, #home {
+		background-color: #e8edea;
 	}
 
 
