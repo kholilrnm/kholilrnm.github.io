@@ -1,11 +1,7 @@
-.wrapper {
-    display: flex;
-    width: 100%;
-}
-
 #desk_content_br {
     margin-left: 21%;
     margin-top: 2%;
+    width: 79%;
 }
 
 #mob_content_br {
