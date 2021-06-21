@@ -37,96 +37,98 @@
 <body>
     <div id="particles-js" style="position: fixed; margin-top: 10px; width: 100%; height: 100%;"></div>
 
-  <div id="loader_hide" class="container text-center mt-5 position-relative">
-    <img style="width: 30%;" class="mt-4 loader-img" src="images/loader.gif" alt="loader">
-    <h3>Happy Ied Mubarok 1442 H</h3>
-    <p style="font-size: 30px;">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ وَ تَقَبَّلْ ياَ كَرِيْمُ</p>
-    <p>Mohon Maaf Lahir dan Batin 🙏</p>
-  </div>
+    <div id="loader_hide" class="container text-center mt-5 position-relative">
+      <img style="width: 30%;" class="mt-4 loader-img" src="images/loader.gif" alt="loader">
+      <h3>Happy Ied Mubarok 1442 H</h3>
+      <p style="font-size: 30px;">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ وَ تَقَبَّلْ ياَ كَرِيْمُ</p>
+      <p>Mohon Maaf Lahir dan Batin 🙏</p>
+    </div>
 
-  <div id="loader_show">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-1">
-      <div class="container">
-        <a class="navbar-brand fw-bold fs-2" href="pages/s_messages.html">Kholil<span class="text-danger">.</span></a>
+    <div id="loader_show">
+      <div id="apps">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-1">
+          <div class="container">
+            <a class="navbar-brand fw-bold fs-2" href="pages/s_messages.html">Kholil<span class="text-danger">.</span></a>
+          </div>
+        </nav>
       </div>
-    </nav>
-    
-    <section class="jumbotron" id="home">
-      <div id="parallax_js" class="container-parallax position-fixed overflow-hidden">
-        <div id="scene" class="scene">
-          <div class="layer" data-depth="0.5"><img src="images/5-min.png" alt="" /></div>
-          <div class="layer" data-depth="2"><img src="images/6-min.png" alt="" /></div>
-          <div class="layer" data-depth="1.3"><img src="images/7-min.png" alt="" /></div>
-          <div class="layer" data-depth="-1.5"><img src="images/8-min.png" alt="" /></div>
-          <div class="layer" data-depth="-1"><img src="images/10-min.png" alt="" /></div>
-          <div class="layer" data-depth="1"><img src="images/11-min.png" alt="" /></div>
-          <div class="layer" data-depth="2"><img src="images/12-min.png" alt="" /></div>
+      
+      <section class="jumbotron" id="home">
+        <div id="parallax_js" class="container-parallax position-fixed overflow-hidden">
+          <div id="scene" class="scene">
+            <div class="layer" data-depth="0.5"><img src="images/5-min.png" alt="" /></div>
+            <div class="layer" data-depth="2"><img src="images/6-min.png" alt="" /></div>
+            <div class="layer" data-depth="1.3"><img src="images/7-min.png" alt="" /></div>
+            <div class="layer" data-depth="-1.5"><img src="images/8-min.png" alt="" /></div>
+            <div class="layer" data-depth="-1"><img src="images/10-min.png" alt="" /></div>
+            <div class="layer" data-depth="1"><img src="images/11-min.png" alt="" /></div>
+            <div class="layer" data-depth="2"><img src="images/12-min.png" alt="" /></div>
+          </div>
         </div>
-      </div>
-      <div class="container text-center position-relative">
-        <img id="img_avatar" src="images/kholil.jpg" alt="Images 1" class="images-avatar rounded-circle" />
-        <h1 class="text-light mt-3">Kholilul Rachman N.M</h1>
-        <p class="text-light fw-light fs-6 mt-3">Full Stack Developer | Freelancer | Content Writer</p>
-            <div class="social-media mt-4">
-              <a href="https://instagram.com/kholilrnm" target="_blank" title="Instagram"><i class="fa fa-instagram fs-4 me-3 text-light sm-content"></i></a>
-              <a href="https://twitter.com/kholilrnm" target="_blank" title="Twitter"><i class="fa fa-twitter fs-4 me-3 text-light sm-content"></i></a>
-              <a href="https://github.com/kholilrnm" target="_blank" title="Github"><i class="fa fa-github fs-4 me-3 text-light sm-content"></i></a>
-              <a href="https://linkedin.com/in/kholilrnm" target="_blank" title="Linkedin"><i class="fa fa-linkedin fs-4 me-3 text-light sm-content"></i></a>
-            </div>
-            <a id="message_me" class="btn btn-primary mt-3 rounded-pill px-5">Secret Message</a><br>
-            <p id="text_message" style="font-size: 13px;"></p>
-            <a id="projects_me" href="#" class="btn btn-primary rounded-pill px-5" onclick="go_projects()">My Projects</a>
-            <p id="text_projects" style="font-size: 13px;"></p>
-            <a id="blogs_me" href="pages/s_blogs.html" class="btn btn-primary rounded-pill px-5">My Blogs</a>
-            <p id="text_blogs" style="font-size: 13px;"></p>
-            <a id="hire_me" href="mailto:kholilrachman.if@gmail.com" class="btn btn-primary rounded-pill px-5">Hire Me</a>
-            <p id="text_hire_me"></p>
 
-            <!-- Modal -->
-            <div class="modal fade" id="modalKirimPesan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Send Me Secret Message</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form onsubmit="return firebaseSend();">
-                            <label>Nama Samaran</label>
-                            <div class="form-group">
-                                <input id="nama_pengirim" type="text" class="form-control" required>
-                            </div>
-                            <label>Isi Pesan</label>
-                            <div class="form-group">
-                                <textarea id="pesan_pengirim" class="form-control" style="height: 200px;" required></textarea>
-                            </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button id="btnSend" type="submit" class="btn btn-primary">Send</button>
-                        <p id="text_message_me" style="font-size: 13px;" class="mt-2"></p>
-                    </form>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <!-- end modal -->
+        <div class="container text-center position-relative">
+          <img id="img_avatar" src="images/kholil.jpg" alt="Images 1" class="images-avatar rounded-circle" />
+          <h1 class="text-light mt-3">Kholilul Rachman N.M</h1>
+          <p class="text-light fw-light fs-6 mt-3">Full Stack Developer | Freelancer | Content Writer</p>
+              <div class="social-media mt-4">
+                <a href="https://instagram.com/kholilrnm" target="_blank" title="Instagram"><i class="fa fa-instagram fs-4 me-3 text-light sm-content"></i></a>
+                <a href="https://twitter.com/kholilrnm" target="_blank" title="Twitter"><i class="fa fa-twitter fs-4 me-3 text-light sm-content"></i></a>
+                <a href="https://github.com/kholilrnm" target="_blank" title="Github"><i class="fa fa-github fs-4 me-3 text-light sm-content"></i></a>
+                <a href="https://linkedin.com/in/kholilrnm" target="_blank" title="Linkedin"><i class="fa fa-linkedin fs-4 me-3 text-light sm-content"></i></a>
+              </div>
+              <a id="message_me" class="btn btn-primary mt-3 rounded-pill px-5">Secret Message</a><br>
+              <p id="text_message" style="font-size: 13px;"></p>
+              <a id="projects_me" href="pages/s_projects.html" class="btn btn-primary rounded-pill px-5">My Projects</a>
+              <p id="text_projects" style="font-size: 13px;"></p>
+              <a id="blogs_me" href="pages/s_blogs.html" class="btn btn-primary rounded-pill px-5">My Blogs</a>
+              <p id="text_blogs" style="font-size: 13px;"></p>
+              <a id="hire_me" href="mailto:kholilrachman.if@gmail.com" class="btn btn-primary rounded-pill px-5">Hire Me</a>
+              <p id="text_hire_me"></p>
 
-      </div>
+              <!-- Modal -->
+              <div class="modal fade" id="modalKirimPesan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Send Me Secret Message</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <form onsubmit="return firebaseSend();">
+                              <label>Nama Samaran</label>
+                              <div class="form-group">
+                                  <input id="nama_pengirim" type="text" class="form-control" required>
+                              </div>
+                              <label>Isi Pesan</label>
+                              <div class="form-group">
+                                  <textarea id="pesan_pengirim" class="form-control" style="height: 200px;" required></textarea>
+                              </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button id="btnSend" type="submit" class="btn btn-primary">Send</button>
+                          <p id="text_message_me" style="font-size: 13px;" class="mt-2"></p>
+                      </form>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+              <!-- end modal -->
+        </div>
 
-      <!-- <ul id="messages"></ul> -->
-    
-    </section>
-    
-    <div id="c_footer_desk"><br><br></div>
+        <!-- <ul id="messages"></ul> -->
+      
+      </section>
+      
+      <div id="c_footer_desk"><br><br></div>
 
-    <footer class="text-center fw-lighter fs-6 border-top mt-5">
-      <div id="cont_footer_mob" class="container pt-3 fw-bolder">
-        <p><i class="far fa-copyright"></i><script>document.write(new Date().getFullYear())</script> | Made with <i class="fas fa-heart" style="color: red"></i></p>
-      </div>
-    </footer>
+      <footer class="text-center fw-lighter fs-6 border-top mt-5">
+        <div id="cont_footer_mob" class="container pt-3 fw-bolder">
+          <p><i class="far fa-copyright"></i><script>document.write(new Date().getFullYear())</script> | Made with <i class="fas fa-heart" style="color: red"></i></p>
+        </div>
+      </footer>
 
-   </div> 
+      </div> 
 
     <script defer>
         $('#loader_show').hide();
@@ -180,6 +182,8 @@
         $('#hire_me').delay(1000).fadeOut().delay(3800).fadeIn();
     </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
+    <script src="js/vue.js"></script>
 
 </body>
 </html>
