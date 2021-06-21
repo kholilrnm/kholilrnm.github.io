@@ -1,10 +1,9 @@
-const namaku = {
-    nama: 'Kholilul Rachman N.M'
-}
-
-const vue = new Vue({
-    el: '#app',
-    data: namaku
+var vm = new Vue({
+    el: '#apps',
+    data: {
+        name: 'Kholilul Rachman N.M',
+        pesan: 'Hi Kholil'
+    }
 })
 
 
