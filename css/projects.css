@@ -1,0 +1,49 @@
+#desk_project_br {
+	display: block;
+}
+
+#mob_project_br {
+	display: none;
+}
+
+.borderRadCard {
+	border-radius: 10px;
+	padding: 15px;
+}
+
+.txt_change {
+	font-size: 14px;
+}
+
+@media (max-width: 767.98px) {
+
+	#home {
+		height: 100%;
+	}
+
+	#desk_project_br {
+		display: none;
+	}
+
+	#mob_project_br {
+		display: block;
+	}
+
+	.margintopcard {
+		margin-top: 30px;
+	}
+
+	.borderRadCard {
+		border-radius: 10px;
+		padding: 15px;
+	}
+
+	.txt_change {
+		font-size: 14px;
+	}
+
+	.card {
+		width: 90% !important;
+	}
+
+}

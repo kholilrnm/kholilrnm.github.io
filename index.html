@@ -1,177 +1,189 @@
-﻿<!DOCTYPE html>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyD4T-Rt9tIgG-peeqzgE7IcVz3ZxNTlan0",
+      authDomain: "mytestmessage-78e87.firebaseapp.com",
+      projectId: "mytestmessage-78e87",
+      storageBucket: "mytestmessage-78e87.appspot.com",
+      messagingSenderId: "836351357253",
+      appId: "1:836351357253:web:56a7c3804e474a1050ce2c",
+      measurementId: "G-RN8Y2BMLS4"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // firebase.analytics();
+</script>
+
+<!DOCTYPE html>
 <html lang="en">
-
-
-<!-- Mirrored from slimhamdi.net/tunis/light/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jun 2020 14:18:44 GMT -->
 <head>
-    <meta charset="utf-8">
-    <title>Tunis - Personal Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio | Kholil</title>
+    <link rel="icon" href="images/favicon.jpg">
 
-    <!-- Template Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700" rel="stylesheet">
-
-    <!-- Template CSS Files -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/preloader.min.css" rel="stylesheet">
-    <link href="css/circle.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/fm.revealator.jquery.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-    <!-- CSS Skin File -->
-    <link href="css/skins/green.css" rel="stylesheet">
-
-    <!-- Live Style Switcher - demo only -->
-    <link rel="alternate stylesheet" type="text/css" title="blue" href="css/skins/blue.css" />
-    <link rel="alternate stylesheet" type="text/css" title="green" href="css/skins/green.css" />
-    <link rel="alternate stylesheet" type="text/css" title="yellow" href="css/skins/yellow.css" />
-    <link rel="alternate stylesheet" type="text/css" title="blueviolet" href="css/skins/blueviolet.css" />
-    <link rel="alternate stylesheet" type="text/css" title="goldenrod" href="css/skins/goldenrod.css" />
-    <link rel="alternate stylesheet" type="text/css" title="magenta" href="css/skins/magenta.css" />
-    <link rel="alternate stylesheet" type="text/css" title="orange" href="css/skins/orange.css" />
-    <link rel="alternate stylesheet" type="text/css" title="purple" href="css/skins/purple.css" />
-    <link rel="alternate stylesheet" type="text/css" title="red" href="css/skins/red.css" />
-    <link rel="alternate stylesheet" type="text/css" title="yellowgreen" href="css/skins/yellowgreen.css" />
-    <link rel="stylesheet" type="text/css" href="css/styleswitcher.css" />
-
-    <!-- Modernizr JS File -->
-    <script src="js/modernizr.custom.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="https://kit.fontawesome.com/81b05bf088.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 </head>
+<body>
 
-<body class="home light">
-<!-- Live Style Switcher Starts - demo only -->
-<div id="switcher" class="">
-    <div class="content-switcher">
-        <h4>STYLE SWITCHER</h4>
-        <ul>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('purple');" title="purple" class="color"><img src="img/styleswitcher/purple.png" alt="purple"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('red');" title="red" class="color"><img src="img/styleswitcher/red.png" alt="red"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('blueviolet');" title="blueviolet" class="color"><img src="img/styleswitcher/blueviolet.png" alt="blueviolet"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('blue');" title="blue" class="color"><img src="img/styleswitcher/blue.png" alt="blue"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('goldenrod');" title="goldenrod" class="color"><img src="img/styleswitcher/goldenrod.png" alt="goldenrod"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('magenta');" title="magenta" class="color"><img src="img/styleswitcher/magenta.png" alt="magenta"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('yellowgreen');" title="yellowgreen" class="color"><img src="img/styleswitcher/yellowgreen.png" alt="yellowgreen"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('orange');" title="orange" class="color"><img src="img/styleswitcher/orange.png" alt="orange"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('green');" title="green" class="color"><img src="img/styleswitcher/green.png" alt="green"/></a>
-            </li>
-            <li>
-                <a href="#" onclick="setActiveStyleSheet('yellow');" title="yellow" class="color"><img src="img/styleswitcher/yellow.png" alt="yellow"/></a>
-            </li>
-        </ul>
-        <a href="https://themeforest.net/item/tunis-personal-portfolio/26761598?irgwc=1&amp;clickid=UBs0rDX6YxyJWfewUx0Mo3E1UkiwozXD10XATw0&amp;iradid=275988&amp;irpid=1327395&amp;iradtype=ONLINE_TRACKING_LINK&amp;irmptype=mediapartner&amp;mp_value1=&amp;utm_campaign=af_impact_radius_1327395&amp;utm_medium=affiliate&amp;utm_source=impact_radius" class="waves-effect waves-light font-weight-700 purchase"><i class="fa fa-shopping-cart"></i> Purchase</a>
-        <div id="hideSwitcher">&times;</div>
-    </div>
-</div>
-<div id="showSwitcher" class="styleSecondColor"><i class="fa fa-cog fa-spin"></i></div>
-<!-- Live Style Switcher Ends - demo only -->
-<!-- Header Starts -->
-<header class="header" id="navbar-collapse-toggle">
-    <!-- Fixed Navigation Starts -->
-    <ul class="icon-menu d-none d-lg-block revealator-slideup revealator-once revealator-delay1">
-        <li class="icon-box active">
-            <i class="fa fa-home"></i>
-            <a href="index-2.html">
-                <h2>Home</h2>
-            </a>
-        </li>
-        <li class="icon-box">
-            <i class="fa fa-user"></i>
-            <a href="about.html">
-                <h2>About</h2>
-            </a>
-        </li>
-        <li class="icon-box">
-            <i class="fa fa-briefcase"></i>
-            <a href="portfolio.html">
-                <h2>Portfolio</h2>
-            </a>
-        </li>
-        <li class="icon-box">
-            <i class="fa fa-envelope-open"></i>
-            <a href="contact.html">
-                <h2>Contact</h2>
-            </a>
-        </li>
-        <li class="icon-box">
-            <i class="fa fa-comments"></i>
-            <a href="blog.html">
-                <h2>Blog</h2>
-            </a>
-        </li>
-    </ul>
-    <!-- Fixed Navigation Ends -->
-    <!-- Mobile Menu Starts -->
-    <nav role="navigation" class="d-block d-lg-none">
-        <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul class="list-unstyled" id="menu">
-                <li class="active"><a href="index-2.html"><i class="fa fa-home"></i><span>Home</span></a></li>
-                <li><a href="about.html"><i class="fa fa-user"></i><span>About</span></a></li>
-                <li><a href="portfolio.html"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
-                <li><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
-                <li><a href="blog.html"><i class="fa fa-comments"></i><span>Blog</span></a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Mobile Menu Ends -->
-</header>
-<!-- Header Ends -->
-<!-- Main Content Starts -->
-<section class="container-fluid main-container container-home p-0 revealator-slideup revealator-once revealator-delay1">
-    <div class="color-block d-none d-lg-block"></div>
-    <div class="row home-details-container align-items-center">
-        <div class="col-lg-4 bg position-fixed d-none d-lg-block"></div>
-        <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
-            <div>
-                <img src="img/img-mobile-light.jpg" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
-                <h6 class="text-uppercase open-sans-font mb-0 d-block d-sm-none d-lg-block">hi there !</h6>
-                <h1 class="text-uppercase poppins-font"><span>I'm</span> Lucy milner</h1>
-                <p class="open-sans-font">I'm a Tunisian based web designer & front‑end developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.</p>
-                <a href="about.html" class="btn btn-about">more about me</a>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Main Content Ends -->
+<body>
+    <div id="particles-js" style="position: fixed; margin-top: 10px; width: 100%; height: 100%;"></div>
 
-<!-- Template JS Files -->
-<script src="js/jquery-3.5.0.min.js"></script>
-<script src="js/styleswitcher.js"></script>
-<script src="js/preloader.min.js"></script>
-<script src="js/fm.revealator.jquery.min.js"></script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/classie.js"></script>
-<script src="js/cbpGridGallery.js"></script>
-<script src="js/jquery.hoverdir.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/custom.js"></script>
+    <div id="loader_hide" class="container text-center mt-5 position-relative">
+      <img style="width: 30%;" class="mt-4 loader-img" src="images/loader.gif" alt="loader">
+      <h3>Happy Ied Mubarok 1442 H</h3>
+      <p style="font-size: 30px;">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ وَ تَقَبَّلْ ياَ كَرِيْمُ</p>
+      <p>Mohon Maaf Lahir dan Batin 🙏</p>
+    </div>
+
+    <div id="loader_show">
+      <div id="apps">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-1">
+          <div class="container">
+            <a class="navbar-brand fw-bold fs-2" href="pages/s_messages.html">Kholil<span class="text-danger">.</span></a>
+          </div>
+        </nav>
+      </div>
+      
+      <section class="jumbotron" id="home">
+        <div id="parallax_js" class="container-parallax position-fixed overflow-hidden">
+          <div id="scene" class="scene">
+            <div class="layer" data-depth="0.5"><img src="images/5-min.png" alt="" /></div>
+            <div class="layer" data-depth="2"><img src="images/6-min.png" alt="" /></div>
+            <div class="layer" data-depth="1.3"><img src="images/7-min.png" alt="" /></div>
+            <div class="layer" data-depth="-1.5"><img src="images/8-min.png" alt="" /></div>
+            <div class="layer" data-depth="-1"><img src="images/10-min.png" alt="" /></div>
+            <div class="layer" data-depth="1"><img src="images/11-min.png" alt="" /></div>
+            <div class="layer" data-depth="2"><img src="images/12-min.png" alt="" /></div>
+          </div>
+        </div>
+
+        <div class="container text-center position-relative">
+          <img id="img_avatar" src="images/kholil.jpg" alt="Images 1" class="images-avatar rounded-circle" />
+          <h1 class="text-light mt-3">Kholilul Rachman N.M</h1>
+          <p class="text-light fw-light fs-6 mt-3">Full Stack Developer | UI/UX Designer | Content Writer</p>
+              <div class="social-media mt-4">
+                <a href="https://instagram.com/kholilrnm" target="_blank" title="Instagram"><i class="fa fa-instagram fs-4 me-3 text-light sm-content"></i></a>
+                <a href="https://twitter.com/kholilrnm" target="_blank" title="Twitter"><i class="fa fa-twitter fs-4 me-3 text-light sm-content"></i></a>
+                <a href="https://github.com/kholilrnm" target="_blank" title="Github"><i class="fa fa-github fs-4 me-3 text-light sm-content"></i></a>
+                <a href="https://linkedin.com/in/kholilrnm" target="_blank" title="Linkedin"><i class="fa fa-linkedin fs-4 me-3 text-light sm-content"></i></a>
+              </div>
+              <a id="message_me" class="btn btn-primary mt-3 rounded-pill px-5">Secret Message</a><br>
+              <p id="text_message" style="font-size: 13px;"></p>
+              <a id="projects_me" href="pages/s_projects.html" class="btn btn-primary rounded-pill px-5">My Projects</a>
+              <p id="text_projects" style="font-size: 13px;"></p>
+              <a id="blogs_me" href="pages/s_blogs.html" class="btn btn-primary rounded-pill px-5">My Blogs</a>
+              <p id="text_blogs" style="font-size: 13px;"></p>
+              <a id="hire_me" href="mailto:kholilrachman.if@gmail.com" class="btn btn-primary rounded-pill px-5">Contact Me</a>
+              <p id="text_hire_me"></p>
+
+              <!-- Modal -->
+              <div class="modal fade" id="modalKirimPesan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Send Me Secret Message</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <form onsubmit="return firebaseSend();">
+                              <label>Nama Samaran</label>
+                              <div class="form-group">
+                                  <input id="nama_pengirim" type="text" class="form-control" required>
+                              </div>
+                              <label>Isi Pesan</label>
+                              <div class="form-group">
+                                  <textarea id="pesan_pengirim" class="form-control" style="height: 200px;" required></textarea>
+                              </div>
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button id="btnSend" type="submit" class="btn btn-primary">Send</button>
+                          <p id="text_message_me" style="font-size: 13px;" class="mt-2"></p>
+                      </form>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+              <!-- end modal -->
+        </div>
+
+        <!-- <ul id="messages"></ul> -->
+      
+      </section>
+      
+      <div id="c_footer_desk"><br><br></div>
+
+      <footer class="text-center fw-lighter fs-6 border-top mt-5">
+        <div id="cont_footer_mob" class="container pt-3 fw-bolder">
+          <p><i class="far fa-copyright"></i><script>document.write(new Date().getFullYear())</script> | Made with <i class="fas fa-heart" style="color: red"></i></p>
+        </div>
+      </footer>
+
+      </div> 
+
+    <script defer>
+        $('#loader_show').hide();
+        $('#loader_hide').delay(2000).fadeOut();
+        $('#loader_show').delay(3000).fadeIn();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        function go_projects() { 
+            document.getElementById('text_projects').innerHTML = "<b>Maaf</b>, projects nya masih dalam tahap pengembangan 😉";
+        }
+        function go_blogs() { 
+            document.getElementById('text_blogs').innerHTML = "<b>Maaf</b>, blogs nya masih dalam tahap pengembangan 😉";
+        }
+    </script>
+
+    <script>
+        $('body').on('click', '#message_me', function () {
+            $('#modalKirimPesan').modal('show');
+        });
+
+        function firebaseSend() {
+            var nama_pengirim = $('#nama_pengirim').val();
+            var pesan_pengirim = $('#pesan_pengirim').val();
+
+            $("#btnSend").attr("disabled", "disabled");
+            document.getElementById('text_message_me').innerHTML = "Pesan berhasil Terkirim 😉";
+
+            console.log(nama_pengirim);
+            console.log(pesan_pengirim);
+
+            firebase.database().ref("messages").push().set({
+                "sender": nama_pengirim,
+                "message": pesan_pengirim
+            });
+
+            return false;
+        }
+    </script>
+
+    <script>
+        $('#message_me').delay(1000).fadeOut().delay(2300).fadeIn();
+        $('#projects_me').delay(1000).fadeOut().delay(2800).fadeIn();
+        $('#blogs_me').delay(1000).fadeOut().delay(3300).fadeIn();
+        $('#hire_me').delay(1000).fadeOut().delay(3800).fadeIn();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
+    <script src="js/vue.js"></script>
 
 </body>
-
-
-<!-- Mirrored from slimhamdi.net/tunis/light/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jun 2020 14:19:30 GMT -->
 </html>
